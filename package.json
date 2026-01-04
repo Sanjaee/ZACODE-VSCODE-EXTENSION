@@ -1,0 +1,83 @@
+{
+    "name": "zacode-clone-extension",
+    "displayName": "Zacode Template Fullstack",
+    "description": "Clone cepat template Flutter, Go, dan Next.js by Zacode.",
+    "version": "2.0.4",
+    "publisher": "Sanjaee",
+    "author": "Sanjaee",
+    "license": "MIT",
+    "icon": "images/logo.png",
+  
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Sanjaee/zacode-clone-extension"
+    },
+  
+    "bugs": {
+      "url": "https://github.com/Sanjaee/zacode-clone-extension/issues"
+    },
+  
+    "homepage": "https://github.com/Sanjaee/zacode-clone-extension",
+  
+    "engines": {
+      "vscode": "^1.74.0"
+    },
+  
+    "categories": [
+      "Other"
+    ],
+  
+    "activationEvents": [
+      "onCommand:sanjaee.cloneFlutter",
+      "onCommand:sanjaee.cloneGo",
+      "onCommand:sanjaee.cloneNext",
+      "onCommand:sanjaee.cloneNextDrizzle"
+    ],
+  
+    "main": "./out/extension.js",
+  
+    "contributes": {
+      "commands": [
+        {
+          "command": "sanjaee.cloneFlutter",
+          "category": "Zacode Clone",
+          "title": "Clone Flutter Template Login"
+        },
+        {
+          "command": "sanjaee.cloneGo",
+          "category": "Zacode Clone",
+          "title": "Clone Go Template Login"
+        },
+        {
+          "command": "sanjaee.cloneNext",
+          "category": "Zacode Clone",
+          "title": "Clone Next Template Login"
+        },
+        {
+          "command": "sanjaee.cloneNextDrizzle",
+          "category": "Zacode Clone",
+          "title": "Clone Next Drizzle Template Login"
+        }
+      ]
+    },
+  
+    "scripts": {
+      "vscode:prepublish": "npm run build",
+      "build": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "package": "vsce package",
+      "publish": "vsce publish"
+    },
+  
+    "dependencies": {
+      "simple-git": "^3.22.0"
+    },
+  
+    "devDependencies": {
+      "@types/node": "^18.0.0",
+      "@types/vscode": "^1.74.0",
+      "typescript": "^5.0.0",
+      "@vscode/vsce": "^3.0.0"
+    }
+  }
+  
