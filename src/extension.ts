@@ -34,6 +34,11 @@ const repositories: Repository[] = [
         label: 'Express Template Login',
         url: 'https://github.com/Sanjaee/EXPRESS-TEMPLATE-LOGIN.git',
         description: 'Repository Express Template Login'
+    },
+    {
+        label: 'Kotlin Template Login',
+        url: 'https://github.com/Sanjaee/KOTLIN-TEMPLATE-LOGIN.git',
+        description: 'Repository Kotlin Template Login'
     }
 ];
 
@@ -46,6 +51,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('sanjaee.cloneNext', () => cloneSelectedRepo(repositories[2])),
         vscode.commands.registerCommand('sanjaee.cloneNextDrizzle', () => cloneSelectedRepo(repositories[3])),
         vscode.commands.registerCommand('sanjaee.cloneExpress', () => cloneSelectedRepo(repositories[4])),
+        vscode.commands.registerCommand('sanjaee.cloneKotlin', () => cloneSelectedRepo(repositories[5])),
     );
 }
 

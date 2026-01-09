@@ -2,7 +2,7 @@
     "name": "zacode-clone-extension",
     "displayName": "Zacode Template Fullstack",
     "description": "Clone cepat template Flutter, Go, dan Next.js by Zacode.",
-    "version": "2.0.5",
+    "version": "2.0.7",
     "publisher": "Sanjaee",
     "author": "Sanjaee",
     "license": "MIT",
@@ -32,7 +32,8 @@
       "onCommand:sanjaee.cloneGo",
       "onCommand:sanjaee.cloneNext",
       "onCommand:sanjaee.cloneNextDrizzle",
-      "onCommand:sanjaee.cloneExpress"
+      "onCommand:sanjaee.cloneExpress",
+      "onCommand:sanjaee.cloneKotlin"
     ],
   
     "main": "./out/extension.js",
@@ -47,22 +48,27 @@
         {
           "command": "sanjaee.cloneGo",
           "category": "Zacode Clone",
-          "title": "Clone Go Template Login"
+          "title": "Clone Golang Template Login (Docker required)"
         },
         {
           "command": "sanjaee.cloneNext",
           "category": "Zacode Clone",
-          "title": "Clone Next Template Login"
+          "title": "Clone Next.js Template Login"
         },
         {
           "command": "sanjaee.cloneNextDrizzle",
           "category": "Zacode Clone",
-          "title": "Clone Next Drizzle Template Login"
+          "title": "Clone Next.js Drizzle Template Login (MVC)"
         },
         {
           "command": "sanjaee.cloneExpress",
           "category": "Zacode Clone",
-          "title": "Clone Express Template Login"
+          "title": "Clone Express.js Template Login (can be deployed vercel)"
+        },
+        {
+          "command": "sanjaee.cloneKotlin",
+          "category": "Zacode Clone",
+          "title": "Clone Kotlin Template Login"
         }
       ]
     },
