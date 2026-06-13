@@ -109,10 +109,16 @@ async function cloneRepository(repoUrl: string, targetPath: string, repoLabel: s
 
                 // Hapus folder .git jika ada (cek di subfolder atau langsung di targetPath)
                 progress.report({ message: 'Menghapus folder .git...' });
-                if (fs.existsSync(gitFolderPathInRepo)) {
-                    fs.rmSync(gitFolderPathInRepo, { recursive: true, force: true });
-                } else if (fs.existsSync(gitFolderPathDirect)) {
-                    fs.rmSync(gitFolderPathDirect, { recursive: true, force: true });
+                try {
+                    const rmOptions = { recursive: true, force: true, maxRetries: 5, retryDelay: 500 };
+                    if (fs.existsSync(gitFolderPathInRepo)) {
+                        fs.rmSync(gitFolderPathInRepo, rmOptions);
+                    } else if (fs.existsSync(gitFolderPathDirect)) {
+                        fs.rmSync(gitFolderPathDirect, rmOptions);
+                    }
+                } catch (rmError) {
+                    console.error('Gagal menghapus .git folder:', rmError);
+                    vscode.window.showWarningMessage('Template berhasil diunduh, tetapi gagal menghapus folder .git otomatis. Anda mungkin perlu menghapusnya secara manual.');
                 }
 
                 vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
