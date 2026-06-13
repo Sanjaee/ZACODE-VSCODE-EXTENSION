@@ -2,7 +2,7 @@
     "name": "zacode-clone-extension",
     "displayName": "Zacode Template Fullstack",
     "description": "Clone cepat template Flutter, Go, dan Next.js by Zacode.",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "publisher": "Sanjaee",
     "author": "Sanjaee",
     "license": "MIT",
@@ -33,7 +33,8 @@
       "onCommand:sanjaee.cloneNext",
       "onCommand:sanjaee.cloneNextDrizzle",
       "onCommand:sanjaee.cloneExpress",
-      "onCommand:sanjaee.cloneKotlin"
+      "onCommand:sanjaee.cloneKotlin",
+      "onCommand:sanjaee.cloneNextTanstackDrizzleSentry"
     ],
   
     "main": "./out/extension.js",
@@ -69,6 +70,11 @@
           "command": "sanjaee.cloneKotlin",
           "category": "Zacode Clone",
           "title": "Clone Kotlin Template Login"
+        },
+        {
+          "command": "sanjaee.cloneNextTanstackDrizzleSentry",
+          "category": "Zacode Clone",
+          "title": "Clone Next.js Tanstack Drizzle Sentry Template"
         }
       ]
     },
